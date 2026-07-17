@@ -2,7 +2,7 @@
 # =============================================================================
 # Project Echo — One-Command Installer
 # =============================================================================
-# Usage: curl -fsSL https://raw.githubusercontent.com/echo-core/echo-core/main/install.sh | bash
+# Usage: curl -fsSL https://raw.githubusercontent.com/NewBitsNow/echo-core/main/install.sh | bash
 # =============================================================================
 
 set -euo pipefail
@@ -52,7 +52,7 @@ echo ""
 
 # --- Install echo-core ---
 echo "📦 Installing echo-core..."
-python3 -m pip install -e echo-core 2>&1 | tail -2
+python3 -m pip install -e . 2>&1 | tail -2
 echo ""
 
 # --- Run setup wizard ---
