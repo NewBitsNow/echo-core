@@ -102,13 +102,13 @@ def classify_task(task_description: str) -> dict:
     # Load tiers and find the best match
     if not TIERS_PATH.exists():
         # Default routing if no config file
-        if complexity < 0.3:
+        if complexity <= 0.3:
             return {
                 "tier": "free", "complexity": round(complexity, 2),
                 "task_type": task_type, "model": "qwen/qwen3-coder:free",
                 "provider": "openrouter",
             }
-        elif complexity < 0.6:
+        elif complexity <= 0.6:
             return {
                 "tier": "paid-cheap", "complexity": round(complexity, 2),
                 "task_type": task_type, "model": "qwen/qwen3-coder",
