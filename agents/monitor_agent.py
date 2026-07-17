@@ -14,7 +14,7 @@ from pathlib import Path
 from echo_core import log_routing
 
 # Paths — configure these for your environment
-REPO_DIR = Path("~/Documents/twin-output").expanduser()
+REPO_DIR = Path("~/.echo-core").expanduser()
 TWIN_OUTPUT_DIR = REPO_DIR
 AGENT_LOG = TWIN_OUTPUT_DIR / "logs" / "agent-log.jsonl"
 STATE_FILE = TWIN_OUTPUT_DIR / "state" / "system-state.json"

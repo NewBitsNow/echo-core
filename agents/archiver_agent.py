@@ -14,7 +14,7 @@ from pathlib import Path
 
 from echo_core import log_routing
 
-TWIN_OUTPUT_DIR = Path("~/Documents/twin-output").expanduser()
+TWIN_OUTPUT_DIR = Path("~/.echo-core").expanduser()
 AGENT_LOG = TWIN_OUTPUT_DIR / "logs" / "agent-log.jsonl"
 CONTENT_DIR = TWIN_OUTPUT_DIR / "content"
 RESEARCH_DIR = TWIN_OUTPUT_DIR / "research"

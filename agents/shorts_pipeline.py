@@ -22,11 +22,11 @@ import argparse
 from datetime import datetime, timezone
 from pathlib import Path
 
-SCRIPTS_DIR = Path("~/Documents/twin-output/scripts").expanduser()
-CONTENT_DIR = Path("~/Documents/twin-output/content").expanduser()
+SCRIPTS_DIR = Path("~/.echo-core/scripts").expanduser()
+CONTENT_DIR = Path("~/.echo-core/content").expanduser()
 SHORTS_DIR = CONTENT_DIR / "framehead-shorts"
 IMAGE_DIR = CONTENT_DIR / "framehead-images"
-LOG_DIR = Path("~/Documents/twin-output/logs").expanduser()
+LOG_DIR = Path("~/.echo-core/logs").expanduser()
 AGENT_LOG = LOG_DIR / "agent-log.jsonl"
 
 # --- Pipeline stages ---

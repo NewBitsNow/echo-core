@@ -15,10 +15,10 @@ from pathlib import Path
 from echo_core import classify_task, log_routing
 
 # Paths
-CONTENT_DIR = Path("~/Documents/twin-output/content").expanduser()
-AGENT_LOG = Path("~/Documents/twin-output/logs/agent-log.jsonl").expanduser()
+CONTENT_DIR = Path("~/.echo-core/content").expanduser()
+AGENT_LOG = Path("~/.echo-core/logs/agent-log.jsonl").expanduser()
 TRANSCRIPT_SCRIPT = Path(
-    "~/Documents/twin-output/.hermes/skills/media/youtube-content/scripts/fetch_transcript.py"
+    "~/.echo-core/.hermes/skills/media/youtube-content/scripts/fetch_transcript.py"
 ).expanduser()
 
 # If the skill path doesn't resolve from twin-output, use the home-relative path

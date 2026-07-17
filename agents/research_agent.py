@@ -14,7 +14,7 @@ from pathlib import Path
 from echo_core import log_routing
 
 ARXIV_SCRIPT = Path.home() / ".hermes/skills/research/arxiv/scripts/search_arxiv.py"
-TWIN_OUTPUT_DIR = Path("~/Documents/twin-output").expanduser()
+TWIN_OUTPUT_DIR = Path("~/.echo-core").expanduser()
 AGENT_LOG = TWIN_OUTPUT_DIR / "logs" / "agent-log.jsonl"
 OUTPUT_DIR = TWIN_OUTPUT_DIR / "research"
 

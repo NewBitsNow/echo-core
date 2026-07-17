@@ -1,7 +1,7 @@
 """Graph Store — read/write/query across 5 knowledge graphs.
 
 The five graphs (Intent, Decision, Evidence, Operational, Trust) are stored as
-YAML files under ~/Documents/twin-output/graphs/. Each graph is a list of entries
+YAML files under ~/.echo-core/graphs/. Each graph is a list of entries
 with a standard schema: id, type, timestamp, content, source, tags.
 
 Usage:
@@ -18,7 +18,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-GRAPHS_DIR = Path("~/Documents/twin-output/graphs").expanduser()
+GRAPHS_DIR = Path("~/.echo-core/graphs").expanduser()
 
 # Standard graph names
 GRAPHS = ["intent", "decision", "evidence", "operational", "trust"]
@@ -112,7 +112,7 @@ def search_graph(graph: str, query: str) -> list:
 def import_adrs_from_memory(memory_path: str = None) -> int:
     """Import ADRs from MEMORY.md into the decision graph."""
     if memory_path is None:
-        memory_path = "~/Documents/twin-output/MEMORY.md"
+        memory_path = "~/.echo-core/MEMORY.md"
 
     path = Path(memory_path).expanduser()
     if not path.exists():

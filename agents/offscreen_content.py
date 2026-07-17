@@ -23,8 +23,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 # --- Paths ---
-OUTPUT_DIR = Path("~/Documents/twin-output/content").expanduser()
-AGENT_LOG = Path("~/Documents/twin-output/logs/agent-log.jsonl").expanduser()
+OUTPUT_DIR = Path("~/.echo-core/content").expanduser()
+AGENT_LOG = Path("~/.echo-core/logs/agent-log.jsonl").expanduser()
 PERSONA_PATH = Path("persona/framehead-persona.md")
 
 # --- Config ---

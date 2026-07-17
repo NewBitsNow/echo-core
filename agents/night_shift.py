@@ -25,7 +25,7 @@ from pathlib import Path
 
 # ── Paths ──
 
-TWIN_OUTPUT = Path("~/Documents/twin-output").expanduser()
+TWIN_OUTPUT = Path("~/.echo-core").expanduser()
 SCRIPTS_DIR = TWIN_OUTPUT / "scripts"
 STATE_FILE = TWIN_OUTPUT / "state" / "night-shift-state.json"
 CONTENT_DIR = TWIN_OUTPUT / "content"
