@@ -1,14 +1,22 @@
-"""echo_core - Project Echo Core Infrastructure.
-
-A lightweight, modular framework for building autonomous digital twin systems.
-Provides model routing, structured delegation, consent management, state tracking,
-and a setup wizard for installing modules.
-
-Usage:
-    pip install echo-core
-    python -m echo_core          # CLI help
-    python -m echo_core.wizard   # Setup wizard
 """
+echo_core — Project Echo Core Infrastructure.
+
+Lightweight digital twin framework for autonomous multi-agent systems.
+
+Data layer (architecturally separate):
+    DataLayer       — Facade over all data stores (state, log, consent, routing, financial, graph)
+    open_repository — One-call convenience to get a configured Repository
+
+    dl = DataLayer(backend="file", base_path="~/.echo-core")
+    dl.state.read()
+    dl.log.append({"agent": "framehead", "action": "generate"})
+    dl.consent.check("code")
+
+Application layer (backward-compatible functional API):
+    classify_task, build_packet, read_consent, read_state, log_agent, ...
+"""
+
+from echo_core.data import DataLayer, open_repository, Repository
 
 from echo_core.core.classify_task import classify_task
 from echo_core.core.packet_builder import build_packet, packet_to_delegation
@@ -42,8 +50,13 @@ from echo_core.core.module_loader import (
     list_available_modules,
 )
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __all__ = [
+    # Data layer
+    "DataLayer",
+    "open_repository",
+    "Repository",
+    # Application layer
     "classify_task",
     "build_packet",
     "packet_to_delegation",
