@@ -21,7 +21,7 @@ TRANSCRIPT_SCRIPT = Path(
     "~/.echo-core/.hermes/skills/media/youtube-content/scripts/fetch_transcript.py"
 ).expanduser()
 
-# If the skill path doesn't resolve from twin-output, use the home-relative path
+# If the skill path doesn't resolve from echo-core, use the home-relative path
 if not TRANSCRIPT_SCRIPT.exists():
     TRANSCRIPT_SCRIPT = Path.home() / ".hermes/skills/media/youtube-content/scripts/fetch_transcript.py"
 

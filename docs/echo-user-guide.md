@@ -727,7 +727,7 @@ deleted, never modified.
 {"timestamp":"...","agent":"orchestrator","cycle":24,"action":"cycle_complete",
  "decisions":["check_repo_status","send_daily_briefing"],
  "status":"completed",
- "summary":"Cycle 24: Mac SSD 41%, 4TB SSD 8%, twin-output 65MB. No escalations.",
+ "summary":"Cycle 24:  project 65MB. No escalations.",
  "escalations":[]}
 ```
 

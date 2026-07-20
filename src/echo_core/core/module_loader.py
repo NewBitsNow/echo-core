@@ -146,7 +146,7 @@ def install_module(module_name: str, paths: list[str] = None) -> dict:
     """Install a module by marking it as installed.
 
     This is a lightweight install — it creates a .installed marker
-    and copies scripts to the twin-output directory as specified in the
+    and copies scripts to the echo-core directory as specified in the
     module's files section.
 
     Args:

@@ -366,7 +366,7 @@ def generate_consent_contract(modules: list[str], config: dict) -> str:
             "spending money or authorizing payments of any kind",
             "sending messages, emails, or communications to third parties",
             "modifying system configuration (hostname, network, security settings)",
-            "deleting files outside the project or twin-output directories",
+            "deleting files outside the project or echo-core directories",
             "accessing financial accounts, credentials, or secrets",
             "modifying the consent contract itself",
             "modifying the Hermes configuration or profile settings",
